@@ -65,7 +65,7 @@ Route::get('foo/{bar}/{baz}', function($bar, $baz){})
 		->where(array('bar' => '[0-9]+', 'baz' => '[A-Za-z]'))
               
 // 设置一个可跨路由使用的模式
- Route::pattern('bar', '[0-9]+')
+Route::pattern('bar', '[0-9]+')
 ```  
 
 ### HTTP 中间件 

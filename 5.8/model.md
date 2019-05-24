@@ -108,14 +108,14 @@ Relation::morphMap([
 ]);
 
 // 多态多对多关联 - 涉及数据库表: posts,videos,tags,taggables
- // Post::tags()
- return $this->morphToMany('App\Tag', 'taggable');
+// Post::tags()
+return $this->morphToMany('App\Tag', 'taggable');
 // Video::tags()
- return $this->morphToMany('App\Tag', 'taggable');
+return $this->morphToMany('App\Tag', 'taggable');
 // Tag::posts()
- return $this->morphedByMany('App\Post', 'taggable');
+return $this->morphedByMany('App\Post', 'taggable');
 // Tag::videos()
- return $this->morphedByMany('App\Video', 'taggable');
+return $this->morphedByMany('App\Video', 'taggable');
 
 // 查找关联
 $user->posts()->where('active', 1)->get();

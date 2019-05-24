@@ -2,26 +2,26 @@
 
 ---
 
-```
+```php
 // 创建指定数据表
- Schema::create('table', function($table)
+Schema::create('table', function($table)
 {
-  $table->increments('id');
+    $table->increments('id');
 });
 // 指定一个连接
- Schema::connection('foo')->create('table', function($table){});
+Schema::connection('foo')->create('table', function($table){});
 // 通过给定的名称来重命名数据表
- Schema::rename($from, $to);
+Schema::rename($from, $to);
 // 移除指定数据表
- Schema::drop('table');
+Schema::drop('table');
 // 当数据表存在时, 将指定数据表移除
- Schema::dropIfExists('table');
+Schema::dropIfExists('table');
 // 判断数据表是否存在
- Schema::hasTable('table');
+Schema::hasTable('table');
 // 判断数据表是否有该列
- Schema::hasColumn('table', 'column');
+Schema::hasColumn('table', 'column');
 // 更新一个已存在的数据表
- Schema::table('table', function($table){});
+Schema::table('table', function($table){});
 // 重命名数据表的列
 $table->renameColumn('from', 'to');
 // 移除指定的数据表列
@@ -34,7 +34,7 @@ $table->string('name')->after('email');
 
 ### 索引
 
-```
+```php
 $table->string('column')->unique();
 $table->primary('column');
 // 创建一个双主键
@@ -111,8 +111,5 @@ $table->enum('choices', array('foo', 'bar'));
 // 添加 remember_token 为 VARCHAR(100) NULL
 $table->rememberToken();
 // 添加整型的 parent_id 和字符串类型的 parent_type
-$table->morphs('parent');
-->nullable()
-->default($value)
-->unsigned()
+$table->morphs('parent');->nullable()->default($value)->unsigned()
 ```

@@ -23,7 +23,7 @@ Arr::except($array, array('key'));
 // 返回数组中第一个通过为真测试的元素
 Arr::first($array, function($key, $value){}, $default);
 // 将多维数组扁平化成一维
- // ['Joe', 'PHP', 'Ruby'];
+// ['Joe', 'PHP', 'Ruby'];
 Arr::flatten(['name' => 'Joe', 'languages' => ['PHP', 'Ruby']]);
 // 以「点」式语法从深度嵌套数组移除给定的键值对
 Arr::forget($array, 'foo');
@@ -130,9 +130,9 @@ collect(['taylor', 'abigail']);
 // 取得设置选项的设置值
 config('app.timezone', $default);
 // 产生包含 CSRF 令牌内容的 HTML 表单隐藏字段
- @{!! csrf_field() !!} 
+@{!! csrf_field() !!} 
 // 5.7+用这个
- @@csrf
+@@csrf
 // 取得当前 CSRF 令牌的内容
 $token = csrf_token();
 // 输出给定变量并结束脚本运行
